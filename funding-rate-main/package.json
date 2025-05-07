@@ -1,0 +1,48 @@
+{
+  "name": "funding-rate-v2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:port": "next dev -p",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest",
+    "prepare-env": "cp -n .env.example .env.local || echo '.env.local already exists'",
+    "monitor": "node app/monitor.mjs",
+    "monitor:pm2": "pm2 start app/monitor.mjs --name funding-rate-monitor"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "ccxt": "^4.4.77",
+    "csv-writer": "^1.6.0",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "http-proxy-agent": "^7.0.2",
+    "https-proxy-agent": "^7.0.0",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "recharts": "^2.10.0",
+    "socks-proxy-agent": "^8.0.5",
+    "tailwindcss": "^3.3.0",
+    "zlib-sync": "^0.1.9"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.3",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.2",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "autoprefixer": "^10.0.0",
+    "axios-mock-adapter": "^1.22.0",
+    "babel-jest": "^29.7.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "latest",
+    "jest": "^29.7.0",
+    "postcss": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
